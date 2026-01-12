@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aplikasi Perpustakaan Smartsatiti</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===== LOGIN PAGE ===== -->
+<div id="loginPage" class="login-wrapper">
+  <div class="login-card glass">
+    <div class="login-header">
+  <h2>🔐 Login</h2>
+  <p>Perpustakaan SMA Negeri 3 Pasuruan</p>
+</div>
+
+    <label>Username</label>
+    <input type="text" id="username" placeholder="Masukkan username">
+
+    <label>Password</label>
+    <input type="password" id="password" placeholder="Masukkan password">
+
+    <button id="loginBtn" type="button">Login</button>
+  </div>
+</div>
+
+<!-- ===== APP PAGE ===== -->
+<div id="appPage" class="hidden">
+  <header>
+    <h2>📚 Perpustakaan Digital Smartsatiti</h2>
+    <div><span id="roleInfo"></span></div>
+
+  </header>
+
+  <div class="container">
+
+    <button id="showBooksBtn" class="nav">📘 Daftar Buku</button>
+    <button id="showHistoryBtn" class="nav">🕘 Riwayat</button>
+
+
+    <!-- DAFTAR BUKU -->
+    <div id="bookList"></div>
+
+    <!-- MENU MANUAL (HANYA SISWA) -->
+    <button id="toggleManualBtn" class="nav">➕ Buku Tidak Ada</button>
+
+    <div id="manualBookForm" class="hidden">
+      <h3>Input Buku Manual</h3>
+      <input id="manualTitle" placeholder="Judul Buku">
+      <input id="manualNama" placeholder="Nama Siswa">
+      <input id="manualKelas" placeholder="Kelas">
+      <input id="manualJumlah" placeholder="Jumlah">
+      <button id="submitManualBtn">Simpan</button>
+    </div>
+
+    <!-- RIWAYAT -->
+    <div id="historyPage" class="hidden">
+      <h3>Riwayat Peminjaman</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+    <!-- ADMIN INFO -->
+    <div id="infoAdmin" class="hidden">
+      <h3>Data Admin</h3>
+      <p>Total Dipinjam: <b id="totalDipinjam">0</b></p>
+      <ul id="listPeminjam"></ul>
+    </div>
+
+    <button id="logoutBtn" class="logout-bottom">Logout</button>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 PerpusSmartsatiti</p>
+  <p>Developed by Ali (21) & Syahrul (35)</p>
+  <p>SMA NEGERI 3 PASURUAN</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
